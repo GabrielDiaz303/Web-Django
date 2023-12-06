@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+{% load static%} 
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'core/style/nosotros.css' %}">
+    <title> {% block title %}Nosotros{% endblock %}</title>
+
+ </head>
+<body>
+    <div class="nosotros">
+        <div class="tit">
+          Nos unimos para proteger a los seres que, consideramos, son los más indefensos del planeta
+        </div>
+        <div class="reseña">
+            Somos un grupo de personas sensibles y preocupadas por el bienestar de todos los animales, especialmente por el
+            bienestar de aquellos que son los más indefensos al tener que vivir y moverse dentro del ámbito de los humanos,
+            como son los perros y los gatos.
+
+            Trabajamos de manera totalmente “ad honórem” en esta ONG fundada en mayo de 2003 en Quilmes, Buenos Aires e
+            inscripta en el Registro Provincial de Personas Jurídicas con matrícula provincial no 1.617.
+
+            La misión de Garritas Felices es "proporcionar medios efectivos para prevenir la crueldad a los animales
+            en todo el distrito"
+        </div>
+    </div>
+     <div class="equipos">
+        <img id="eq1" src="{% static 'core/imagenes/equipo1.jpg' %}" alt="grupo">
+        <img id="eq2"src="{% static 'core/imagenes/equipo2.jpg' %}" alt="grupo2">
+    <img id="eq3"src="{% static 'core/imagenes/equipo3.jpg' %}" alt="grupo3">
+  </div>
+  
+    <a id="fondo" href="{% url 'index' %}">
+      Volver a la página principal
+    </a>
+</body>
+{% endblock %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title> {% block title %}Web Adopciones{% endblock %}</title>
+
+  {% load static %}
+  <!--icono de la pagina-->
+  <link rel="shortcut icon" href="{% static 'core/imagenes/icono.png' %}" type="image/x-icon">
+  <!--hoja de estilo-->
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'core/style/style.css' %}">
+  {% endblock %}
+  
+  <!--fuentes de Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Montserrat:ital@1&display=swap"
+  rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bc1a01dde7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <nav class="navbar">
+       
+        <div class="brand-title">
+            <img id="logo" src=" {% static 'core/imagenes/icono.png' %}" alt="icono">
+            <h1>Refugio "Garrita Feliz"</h1></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="{% url 'index' %}" target="_blank">Home</a></li>
+            <li><a href="{% url 'nosotros' %}" target="_blank">Nosotros</a></li>
+            <li><a href="{% url 'contacto' %}" target="_blank">Contacto</a></li>
+            <li><a href="{% url 'perrosygatos' %}" target="_blank">Perros y Gatos</a></li>
+            <li><a href="{% url 'tienda' %}" target="_blank">Tienda</a></li>
+          </ul>
+        </div> 
+      </nav>
+      
+      {%block content %}{% endblock %}
+      <footer>
+        <h3 id="txtfooter">Encontranos en nuestras redes</h3>
+        <div class="footer">
+          <a href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="http//:www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright"><i class="fa-solid fa-copyright"></i>
+          <p>Desarrollado por:</p>
+          <div class="div"></div>
+        </div>
+        <img class="imagen" src="{% static 'core/imagenes/footer.jpg' %}" alt="fondo de mascotas">
+      </footer>
+      <script src="{% static 'core/js/script.js' %}"></script>
+
+</body>
